@@ -5,7 +5,7 @@ const Header: React.FC = () => {
   return (
     <header className="bg-blue-500 text-white py-4 shadow-md">
       <div className="container mx-auto flex justify-around items-center">
-        <h1 className="text-xl font-bold">Task Manager</h1>
+        <h1 className="text-xl font-bold">Gestionnaire de Tâches</h1>
         <nav>
           <ul className="flex space-x-4">
             <li>
