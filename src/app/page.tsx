@@ -10,7 +10,6 @@ const Home: React.FC = () => {
             <Header />
           </header>
           <main className="flex-grow p-6">
-            {/* <TaskForm /> */}
             <TaskList />
           </main>
           <footer>

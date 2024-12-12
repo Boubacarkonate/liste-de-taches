@@ -3,16 +3,6 @@ import { NextResponse } from "next/server";
 
 const prisma = new PrismaClient;
 
-//Méthode GET (Toutes les tâches)
-// export async function GET(request: Request){
-//     try {
-//         const post = await prisma.task.findMany();
-//         return NextResponse.json(post, {status: 200});
-//     } catch (error) {
-//         return NextResponse.json({message : "erreur dans la récupérations des posts"}, {status:200} )
-//     }
-// }
-
 export async function GET() {
     try {
         // Récupérer toutes les tâches de la base de données
@@ -55,8 +45,3 @@ export async function POST(request: Request){
         );
     }
 }
-
-
-///////////////////////////////////////////////
-
-
