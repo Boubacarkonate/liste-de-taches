@@ -1,5 +1,5 @@
 export const fetchTasks = async () => {
-  const response = await fetch("https://mytodo-app-blush.vercel.app/");
+  const response = await fetch("https://mytodo-app-blush.vercel.app/api/task");
   if (!response.ok) {
     throw new Error("Erreur lors de la récupération des tâches");
   }
