@@ -1,3 +1,5 @@
+import { PencilAltIcon, SaveIcon, TrashIcon, XIcon } from '@heroicons/react/solid';
+
 interface TaskItemProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
     task: any;
@@ -18,19 +20,19 @@ interface TaskItemProps {
               type="text"
               value={editingTask?.name || ''}
               onChange={(e) => setEditingTask({ ...editingTask, name: e.target.value })}
-              className="px-4 py-2 border rounded-md shadow-sm focus:ring focus:ring-blue-300"
+              className="px-1 py-2 border rounded-md shadow-sm focus:ring focus:ring-blue-300"
             />
             <button
               onClick={() => handleSaveTask(task.id, editingTask.name)}
-              className="px-3 py-1 text-white bg-green-500 rounded-md hover:bg-green-600 ml-2"
+             
             >
-              Sauvegarder
+              <SaveIcon className="h-5 w-5  text-white bg-green-500 hover:bg-green-600 mx-3"  />
             </button>
             <button
               onClick={() => setEditingTask(null)} // bouton pour annuler la modification
-              className="px-3 py-1 text-white bg-gray-500 rounded-md hover:bg-gray-600 ml-2"
+             
             >
-              Annuler
+               <XIcon className="h-5 w-5 text-white bg-gray-500  hover:bg-gray-600" />
             </button>
           </div>
         ) : (
@@ -39,15 +41,15 @@ interface TaskItemProps {
             <div className="space-x-2">
               <button
                 onClick={() => setEditingTask(task)} // bouton pour modifier la tâche
-                className="px-3 py-1 text-white bg-green-500 rounded-md hover:bg-green-600"
+                
               >
-                Modifier
+                <PencilAltIcon className="h-5 w-5 text-yellow-500" />
               </button>
               <button
                 onClick={() => handleDeleteTask(task.id)} // bouton pour supprimer la tâche
-                className="px-3 py-1 text-white bg-red-500 rounded-md hover:bg-red-600"
+                
               >
-                Supprimer
+                <TrashIcon className="h-5 w-5 text-red-500" />
               </button>
             </div>
           </>

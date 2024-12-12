@@ -10,6 +10,7 @@
     "vercel-build": "prisma generate && next build"
   },
   "dependencies": {
+    "@heroicons/react": "^1.0.6",
     "@prisma/client": "^6.0.1",
     "next": "15.0.4",
     "prisma": "^6.0.1",
