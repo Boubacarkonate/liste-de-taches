@@ -13,20 +13,20 @@ interface TaskItemProps {
   
   const TaskItem = ({ task, editingTask, setEditingTask, handleSaveTask, handleDeleteTask }: TaskItemProps) => {
     return (
-      <li key={task.id} className="flex items-center justify-between p-4 bg-gray-100 rounded-md shadow-sm">
+      <li key={task.id} className="flex items-center justify-between p-4 bg-gray-100 rounded-md shadow-md">
         {editingTask?.id === task.id ? (
           <div className="flex items-center">
             <input
               type="text"
               value={editingTask?.name || ''}
               onChange={(e) => setEditingTask({ ...editingTask, name: e.target.value })}
-              className="px-1 py-2 border rounded-md shadow-sm focus:ring focus:ring-blue-300"
+              className="px-1 py-2 border rounded-lg shadow-sm focus:ring focus:ring-blue-300 focus:outline-none"
             />
             <button
               onClick={() => handleSaveTask(task.id, editingTask.name)}
              
             >
-              <SaveIcon className="h-5 w-5  text-white bg-green-500 hover:bg-green-600 mx-3"  />
+              <SaveIcon className="h-5 w-5  text-white bg-green-500 hover:bg-green-600 mx-2"  />
             </button>
             <button
               onClick={() => setEditingTask(null)} // bouton pour annuler la modification
@@ -37,7 +37,7 @@ interface TaskItemProps {
           </div>
         ) : (
           <>
-            <span className="text-gray-700">{task.name}</span>
+            <span className="font-semibold">{task.name}</span>
             <div className="space-x-2">
               <button
                 onClick={() => setEditingTask(task)} // bouton pour modifier la tâche

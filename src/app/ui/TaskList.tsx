@@ -90,14 +90,16 @@ const TaskList = () => {
   }
 
   return (
-    <div className="p-6 max-w-2xl mx-auto space-y-6 bg-white rounded-lg shadow-md">
-      <h1 className="text-2xl font-bold text-center text-gray-800">Ma Liste</h1>
+    <div className="p-6 max-w-3xl mx-auto space-y-8 bg-white bg-opacity-90 rounded-xl shadow-lg backdrop-blur-sm">
+      <h1 className="text-3xl font-extrabold text-center text-gray-800 tracking-tight drop-shadow-lg">
+        Liste des <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500">Tâches</span>
+      </h1>
 
       {/* Composant qui ajoute une tâche */}
       <TaskInput taskName={taskName} setTaskName={setTaskName} handleAddTask={handleAddTask} />
 
       {/* Liste des tâches */}
-      <ul className="space-y-4">
+      <ul className="space-y-4 divide-y divide-gray-200">
         {tasks
           .filter((task) => task !== null && task !== undefined)
           .map((task) => (

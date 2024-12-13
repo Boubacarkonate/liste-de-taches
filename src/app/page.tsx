@@ -5,7 +5,7 @@ import TaskList from "./ui/TaskList";
 
 const Home: React.FC = () => {
     return (
-        <div className="min-h-screen flex flex-col bg-gray-100">
+        <div className="min-h-screen flex flex-col bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500">
           <header>
             <Header />
           </header>

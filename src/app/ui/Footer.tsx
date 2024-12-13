@@ -4,7 +4,7 @@ import React from "react";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-500 text-white py-4">
+    <footer className="bg-gradient-to-r from-gray-800 via-gray-700 to-gray-900 text-gray-300 shadow-inner">
       <div className="container mx-auto text-center">
         <p className="text-sm">
           © {new Date().getFullYear()} Liste des tâches. tous droits réservés.
